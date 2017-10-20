@@ -1,0 +1,6 @@
+name: genbuckets
+version: 1.0
+main: net.oreocraft.play.GenBuckets 
+author: William
+commands:
+         genbucket: 
