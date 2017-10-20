@@ -102,14 +102,31 @@ public class Generating implements Listener {
 						return;
 					}
 
-					if (newblock.add(3, 0, 0).getBlock().getType() == Material.SPONGE
-							|| newblock.add(-3, 0, 0).getBlock().getType() == Material.SPONGE
-							|| newblock.add(0, -3, 0).getBlock().getType() == Material.SPONGE
-							|| newblock.add(0, 3, 0).getBlock().getType() == Material.SPONGE
-							|| newblock.add(0, 0, 3).getBlock().getType() == Material.SPONGE
-							|| newblock.add(0, 0, -3).getBlock().getType() == Material.SPONGE) {
+					if(newblock.add(0, 3, 0).getBlock().getType() == Material.SPONGE){
 						cancel();
-						;
+						return;
+					}
+					if(newblock.add(0, 0, -3).getBlock().getType() == Material.SPONGE){
+						cancel();
+						return;
+					}
+					if (newblock.add(3, 0, 0).getBlock().getType() == Material.SPONGE) {
+						cancel();
+						
+						return;
+					}
+					if(newblock.add(-3, 0, 0).getBlock().getType() == Material.SPONGE){
+						cancel();
+						
+						return;
+					}
+					if(newblock.add(0, -3, 0).getBlock().getType() == Material.SPONGE){
+						cancel();
+						
+						return;
+					}
+					if(newblock.add(0, 0, 3).getBlock().getType() == Material.SPONGE){
+						cancel();
 						return;
 					}
 					newblock.getBlock().setType(Material.OBSIDIAN);
